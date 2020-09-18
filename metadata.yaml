@@ -1,5 +1,5 @@
 homepage: "https://heylink.com"
 documentation: "https://heylink.com/gtm/documentation"
 versions:
-  - sha: 18d5bacc15cb65b619e444d7ca5df72073effd57
+  - sha: beba820cd6162da8a304f6f48a024a236116d46b
     changeNotes: Initial release.
