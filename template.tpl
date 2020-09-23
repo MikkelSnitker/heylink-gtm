@@ -54,9 +54,11 @@ log('data =', data);
 // Call data.gtmOnSuccess when the tag is finished.
 const queryPermission = require('queryPermission');
 const sendPixel = require('sendPixel');
+const encodeUriComponent = require('encodeUriComponent');
 const amount = data.amount;
 const orderid = data.orderid;
-const url = 'https://trackha.heylink.com/aff_l?offer_id=12&adv_sub='+orderid+'&amount='+amount;
+
+const url = ['https://trackha.heylink.com/aff_l?offer_id=12&adv_sub=',encodeUriComponent(orderid),'&amount=',encodeUriComponent(amount)].join('');
 if (queryPermission('send_pixel', url)) {
   sendPixel(url);
 }
