@@ -1,5 +1,7 @@
 homepage: "https://heylink.com"
 documentation: "https://github.com/MikkelSnitker/heylink-gtm"
 versions:
+  - sha: 134dac834a359dc2566bf715c6a3563a664bf97e
+    changeNotes: Offer id added as variable
   - sha: 804e9f172523b0edb910d09fbc75d4b0d347a29b
     changeNotes: Initial release.
