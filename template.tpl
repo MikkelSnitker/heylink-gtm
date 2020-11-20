@@ -32,6 +32,12 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "TEXT",
+    "name": "offerid",
+    "displayName": "Offer ID",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
     "name": "amount",
     "displayName": "Amount",
     "simpleValueType": true
@@ -57,8 +63,9 @@ const sendPixel = require('sendPixel');
 const encodeUriComponent = require('encodeUriComponent');
 const amount = data.amount;
 const orderid = data.orderid;
+const offerid = data.offerid;
 
-const url = ['https://trackha.heylink.com/aff_l?offer_id=12&adv_sub=',encodeUriComponent(orderid),'&amount=',encodeUriComponent(amount)].join('');
+const url = ['https://trackha.heylink.com/aff_l?offer_id=',encodeUriComponent(offerid),'&adv_sub=',encodeUriComponent(orderid),'&amount=',encodeUriComponent(amount)].join('');
 if (queryPermission('send_pixel', url)) {
   sendPixel(url);
 }
